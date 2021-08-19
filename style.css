@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gold;
+}
+
+.container {
+  height: 100vh;
+  margin-top: 300px;
+
+  display: flex;
+  justify-content: center;
+}
+
+kbd {
+  display: inline-block;
+  text-align: center;
+
+  font-size: 30px;
+  transition: all .4s linear;
+}
+
+.white-keys {
+  display: flex;
+}
+
+.white-keys kbd {
+  padding-top: 250px;
+  height: 350px;
+  width: 85px;
+
+  background-color: #fff;
+  border: 5px solid silver;
+}
+
+.white-keys > kbd:not(:last-child) {
+  border-right-width: 0;
+}
+
+.black-keys {
+  position: absolute;
+}
+
+.black-keys kbd {
+  padding-top: 160px;
+
+  height: 220px;
+  width: 60px;
+
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.black-keys > kbd:not(:last-child) {
+  margin-right: 20px;
+}
+
+.black-keys > kbd:nth-child(1) {
+  margin-right: 25px;
+}
+
+.black-keys > kbd:nth-child(2) {
+  margin-right: 110px;
+}
+
+kbd.pressed {
+  opacity: .2;
+  color: red;
+}
+
+.black-keys > kbd.pressed {
+  background-color: black;
+}
